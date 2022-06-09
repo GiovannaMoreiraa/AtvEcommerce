@@ -73,29 +73,5 @@
         echo "Erro! Nenhum pedido foi selecionado";
       }
     }
-
-    function inserirProduto(){
-
-      require_once('../controller/conexao.php');
-      session_start();
-
-      $produto = $mysqli->query("INSERT INTO PRODUTOS (IDCATEGORIA,IDMARCA,IDPROD,DESCRICAO,ESTOQUE,NOME,PRECO) VALUES(1,1,3,'Computador Portátil',10,'Ultrabook',4000)");
-
-      if($produto){
-        $id = mysql_insert_id($mysqli);
-
-        unset($_SESSION['produtos']);
-
-        header('location:../pedido.php?pedido='.$id);
-
-      }else
-      {
-        echo "Erro! Adicionar o produto";
-      }
-
-
-    }    
-
-
   }
 ?>

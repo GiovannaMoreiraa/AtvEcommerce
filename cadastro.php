@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Produtos</title>
     <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
   </head>
@@ -14,83 +15,60 @@
         <a href="index.php" target="_blank">Catálogo</a>
       </div>
     </header>
-    <section id="cadastro">
-        <div class="center">
-          <h1>Cadastro de Clientes</h1>
+
+    <div class="container my-5">
+      <div class="card" >
+        <h5 class="card-header" style="text-align:center">Novo Cliente</h5>
+        <div class="card-body">
+          <h5 class="card-title" style="text-align:center; margin-bottom:30px">Informações de Login</h5>
+          
+          <div class="row">
+
+          <div class="col-md-6">
+            <label for="exampleFormControlInput1" class="form-label">Nome Completo</label>
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o Nome">
+          </div>
+
+          <div class="col-md-6">
+            <label for="exampleFormControlInput1" class="form-label">Login</label>
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" id="login" name="login" placeholder="Digite o Login">
+          </div>
+
+          <div class="col-md-6">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+          </div>
+          <div class="col-md-6">
+            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+          </div>
+
+          <div class="col-md-6">
+            <label for="exampleFormControlInput1" class="form-label">Senha</label>
+          </div>
+          <div class="col-md-6">
+            <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite a senha">
+          </div>
+
         </div>
+      </div>
+      <input href="model/Cliente.class.php?id='.$prod->IDPROD.'" class="btn btn-outline-secondary" type="submit" >
+    </div>
 
-        <form>
-            <fieldset>
-                <div>
-                    <!-- Nome-->
-                    <label>Nome Completo</label>
-                    <input type="text" name="nome" id="nome" placeholder="Nome"></input><br>
-                </div>
+    
 
-                <div>
-                     <!-- Login-->
-                     <label>Login</label>
-                    <input type="text" name="login" id="login" placeholder="Login"></input><br>
-                </div>
+    
 
-                <div>
-                     <!-- Senha-->
-                     <label>Senha</label>
-                    <input type="password" name="senha" id="senha" placeholder="Senha"></input>
-                </div>
+    
 
-                <div>
-                     <!-- Nascimento-->
-                     <label>Data de Nascimento</label>
-                    <input type="text" name="nascimento" id="nascimento" placeholder="Data de Nascimento"></input>
-                </div>
-                
-                <div>
-                     <!-- Endereço-->
-                     <label>Endereço</label>
-                    <input type="text" name="endereco" id="endereco" placeholder="Endereço"></input>
-                </div>
 
-                <div>
-                     <!-- Sexo-->
-                     <label>Sexo</label>
-                     <label>
-                        <input type="radio" name="sexo" value="1">Masculino</input>
-                     </label>
-                     <label>
-                        <input type="radio" name="sexo" value="2">Feminino</input>
-                     </label>
-                     <label>
-                        <input type="radio" name="sexo" value="3">Outro</input>
-                     </label>                  
-                </div>
 
-                <div>
-                     <!-- CPF-->
-                     <label>CPF</label>
-                    <input type="text" name="cpf" id="cpf" placeholder="CPF"></input>
-                </div>
 
-                <div>
-                     <!-- RG-->
-                     <label>RG</label>
-                    <input type="text" name="rg" id="rg" placeholder="RG"></input>
-                </div>
+   
 
-                <div>
-                     <!-- Telefone-->
-                     <label>Telefone</label>
-                    <input type="text" name="telefone" id="telefone" placeholder="Telefone"></input>
-                </div>
-
-                <div>
-                     <!-- Celular-->
-                     <label>Celular</label>
-                    <input type="text" name="celular" id="celular" placeholder="Celular"></input>
-                </div>
-            </fieldset>
-        </form>
-    </section>
-
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
   </body>
 </html>

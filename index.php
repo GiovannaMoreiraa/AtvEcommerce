@@ -17,7 +17,10 @@
     </header>
     <section id="produtos">
         <div class="center">
-          <?php require_once('controller/produtos-busca.php'); ?>
+          
+          <?php 
+          // die()
+          require_once('controller/produtos-busca.php'); ?>
         </div>
     </section>
 
