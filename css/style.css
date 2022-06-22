@@ -76,3 +76,8 @@ section#produtos a {
 .card-header {
     background-color: #D2BB9C;
 }
+
+.botao-navegacao {
+    margin-left: 10px;
+    margin-right: 10px;
+}

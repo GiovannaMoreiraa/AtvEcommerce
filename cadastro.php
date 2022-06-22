@@ -22,35 +22,92 @@
         <div class="card-body">
           <h5 class="card-title" style="text-align:center; margin-bottom:30px">Informações de Login</h5>
           
+          
           <div class="row">
 
           <div class="col-md-6">
-            <label for="exampleFormControlInput1" class="form-label">Nome Completo</label>
+            <label for="exampleFormControlInput1" class="form-label">Nome Completo:</label>
           </div>
           <div class="col-md-6">
             <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o Nome">
           </div>
 
           <div class="col-md-6">
-            <label for="exampleFormControlInput1" class="form-label">Login</label>
+            <label for="exampleFormControlInput1" class="form-label">Login:</label>
           </div>
           <div class="col-md-6">
             <input type="text" class="form-control" id="login" name="login" placeholder="Digite o Login">
           </div>
 
           <div class="col-md-6">
-            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <label for="exampleFormControlInput1" class="form-label">Email:</label>
           </div>
           <div class="col-md-6">
-            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+            <input type="email" class="form-control" id="email" name="email" placeholder="Digite o Email">
           </div>
 
           <div class="col-md-6">
-            <label for="exampleFormControlInput1" class="form-label">Senha</label>
+            <label for="exampleFormControlInput1" class="form-label">Senha:</label>
           </div>
           <div class="col-md-6">
             <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite a senha">
           </div>
+
+          <div class="col-md-6">
+            <label for="exampleFormControlInput1" class="form-label">Nascimento:</label>
+          </div>
+          <div class="col-md-6">
+            <input type="date" class="form-control" id="nasc" name="nasc" placeholder="DD/MM/AAAA">
+          </div>
+
+          <div class="col-md-6">
+            <label for="exampleFormControlInput1" class="form-label">CPF:</label>
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" id="cpf" name="cpf" placeholder="Digite o CPF">
+          </div>
+
+          <div class="col-md-6">
+            <label for="exampleFormControlInput1" class="form-label">Endereço:</label>
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Digite o Endereço">
+          </div>
+
+          <div class="col-md-6">
+            <label for="exampleFormControlInput1" class="form-label">RG:</label>
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" id="rg" name="rg" placeholder="Digite o RG">
+          </div>
+
+          <div class="col-md-6">
+            <label for="exampleFormControlInput1" class="form-label">Celular:</label>
+          </div>
+          <div class="col-md-6">
+            <input type="tel" class="form-control" id="celular" name="celular" placeholder="Digite o Celular">
+          </div>
+
+          <div class="col-md-6">
+            <label for="exampleFormControlInput1" class="form-label">Telefone:</label>
+          </div>
+          <div class="col-md-6">
+            <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="Digite o Telefone">
+          </div>
+
+          <div class="col-md-6">
+            <label for="exampleFormControlInput1" class="form-label">Sexo:</label>
+          </div>
+          <div class="col-md-6">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Selecione o sexo</option>
+            <option value="1">Masculino</option>
+            <option value="2">Feminino</option>
+            <option value="3">Outro</option>
+          </select>
+          </div>
+
+          
 
         </div>
       </div>
