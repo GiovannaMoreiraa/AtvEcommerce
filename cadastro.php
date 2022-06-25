@@ -21,7 +21,7 @@
       <div class="card" >
         <h5 class="card-header" style="text-align:center">Novo Cliente</h5>
         <div class="card-body">
-          <form action="">
+          <form action="controller/cliente-add.php" method = "GET">
 
           <h5 class="card-title" style="text-align:center; margin-bottom:30px">Informações de Login</h5>
           

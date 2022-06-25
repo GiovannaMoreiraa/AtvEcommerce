@@ -13,60 +13,67 @@ class Cliente
     protected string $telefone;
     protected string $celular;
     protected $nasc;
+    protected $pdo;
 
 
-    function getConexao()
-    {
-        $pdo = new ConexaoPdo(); 
-        return $pdo;
+
+
+    function __construct(){
+        // Dados para conectar com o banco
+        $host = "";
+        $dbname = "";
+        $user = "";
+        $pass = ""; 
+
+        // Instância do banco
+        $pdo = new PDO("mysql:host=$host;dbname=$dbname" , $user , $pass);
+        $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
+        $this->pdo = $pdo;
     }
 
 
-    function __construct($login,$senha)
-    {
-        $this->login = $login;
-        $this->senha = $senha;
-    }
 
-    function setAllData($nome,$cpf,$endereco,$rg,$telefone,$celular,$nasc)
-    {
-        $this->nome = $nome;
-        $this->celular = $celular;
-        $this->endereco = $endereco;
-        $this->rg = $rg;
-        $this->telefone = $telefone;
-        $this->celular = $celular;
-        $this->nasc = $nasc; 
-        $this->cpf = $cpf;
-    }
+    function add(){
+        try{
 
-    function cadastrar()
-    {
-        $pdo = $this->getConexao();
-
-        $sql = "SELECT * from cliente where nome = $this->nome and login = $this->login and senha = $this->senha and 
-            dtnasc = $this->nasc and sexo
-        ";
-
-        $sql = "INSERT INTO cliente (nome, login, senha, dtnasc, sexo, cpf, rg, telefone, celular)
-         VALUES ($this->nome,$this->login,$this->senha,$this->nasc,$this->sexo,$this->cpf,$this->rg,$this->telefone,$this->celular)";
-
-        $pdo->query($sql);
-    }
-
-    function logar()
-    {
-        $login = $this->login;
-        $senha = $this->senha;
-
-        $sql = "SELECT idcli from cliente WHERE login = 'arthur' and senha = 'senhasenha'";
-        $pdo = $this->getConexao();
-        $id = $pdo->query($sql)->fetchAll();
-        var_dump($id);
-        echo "<br>";
-        var_dump($this);
-        echo "<br>";
         
-        $_SESSION['users'][0] = $this;
+        $nome = $_GET['nome'];
+        $login = $_GET['login'];
+        $senha = $_GET['senha'];
+        $cpf = $_GET['cpf'];
+        $endereco = $_GET['endereco'];
+        $rg = $_GET['rg'];
+        $telefone = $_GET['telefone'];
+        $celular = $_GET['celular'];
+        $nasc = $_GET['nasc'];
+        $sexo = $_GET['sexo'];
+
+
+        $pdo = $this->pdo;
+        
+        $sql = "insert into cliente (nome, login, senha, dtnasc, 
+        endereco, sexo, cpf, rg, telefone, celular) 
+        values (:nome, :login, :senha, :dtnasc,
+         :endereco, :sexo, :cpf, :rg, :telefone, :celular)";
+
+        
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':nome',$nome);
+        $stmt->bindParam(':login',$login);
+        $stmt->bindParam(':senha',$senha);
+        $stmt->bindParam(':cpf',$cpf);
+        $stmt->bindParam(':endereco',$endereco);
+        $stmt->bindParam(':rg',$rg);
+        $stmt->bindParam(':telefone',$telefone);
+        $stmt->bindParam(':celular',$celular);
+        $stmt->bindParam(':dtnasc',$nasc);
+        $stmt->bindParam(':sexo',$sexo);
+
+
+        $stmt->execute();
+
+        }Catch(Exception $e){
+            echo "Erro : " . $e->getMessage();
+        }
     }
 }

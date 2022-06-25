@@ -7,3 +7,5 @@ try{
 }catch(Exception $e){
     die("Erro : " . $e->getMessage);
 }
+
+header("Location: ../index.php");
