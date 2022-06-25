@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Produtos</title>
+    <title>Novo Cliente</title>
     <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
@@ -12,7 +12,7 @@
     <header>
       <div class="center">
         <h1>Programação Web II - Cadastro de Clientes - By Anderson Macedo</h1>
-        <a href="index.php" target="_blank">Catálogo</a>
+        <a href="index.php" target="_blank">Início</a>
       </div>
     </header>
 
@@ -100,7 +100,7 @@
           </div>
           <div class="col-md-6">
           <select class="form-select" aria-label="Default select example">
-            <option selected>Selecione o sexo</option>
+            <option selected disabled>Selecione o sexo</option>
             <option value="1">Masculino</option>
             <option value="2">Feminino</option>
             <option value="3">Outro</option>
