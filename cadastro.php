@@ -5,6 +5,7 @@
     <title>Novo Cliente</title>
     <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
     <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
   </head>
@@ -20,6 +21,8 @@
       <div class="card" >
         <h5 class="card-header" style="text-align:center">Novo Cliente</h5>
         <div class="card-body">
+          <form action="">
+
           <h5 class="card-title" style="text-align:center; margin-bottom:30px">Informações de Login</h5>
           
           
@@ -108,10 +111,16 @@
           </div>
 
           
-
+          <div class="row">
+              <div class="col-md-4"></div>
+              <div class="col-md-4" style="display: grid;">
+                <input href="model/Cliente.class.php?id='.$prod->IDPROD.'" class="btn btn-secondary" type="submit" >
+              </div>
+              <div class="col-md-4"></div>
+            </div>
+          </form>
         </div>
       </div>
-      <input href="model/Cliente.class.php?id='.$prod->IDPROD.'" class="btn btn-outline-secondary" type="submit" >
     </div>
 
     
