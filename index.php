@@ -14,14 +14,20 @@
         <a class="botao-navegacao" style="margin-left:10px; margin-right: 10px;" href="carrinho.php" target="_blank">Carrinho</a>
         <a style="margin-left:10px; margin-right: 10px;" href="cadastro.php" target="_blank">Cadastrar Cliente</a>
         <a style="margin-left:10px; margin-right: 10px;" href="produto.php" target="_blank">Cadastrar Produto</a>
+        <a style="margin-left:10px; margin-right: 10px;" href="index.php?value=1 " target="_blank">Apresentar Clientes</a>
       </div>
     </header>
     <section id="produtos">
         <div class="center">
           
           <?php 
-          // die()
-          require_once('controller/produtos-busca.php'); ?>
+          
+          if (!count($_GET) > 0){
+          require_once('controller/produtos-busca.php');
+          } else if ($_GET['value'] == 1){
+            require_once('controller/cliente-busca.php');
+          } 
+          ?>
         </div>
     </section>
 
