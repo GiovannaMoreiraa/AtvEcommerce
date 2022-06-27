@@ -42,12 +42,12 @@
             <input type="text" class="form-control" id="login" name="login" placeholder="Digite o Login">
           </div>
 
-          <div class="col-md-6">
+          <!-- <div class="col-md-6">
             <label for="exampleFormControlInput1" class="form-label">Email:</label>
           </div>
           <div class="col-md-6">
             <input type="email" class="form-control" id="email" name="email" placeholder="Digite o Email">
-          </div>
+          </div> -->
 
           <div class="col-md-6">
             <label for="exampleFormControlInput1" class="form-label">Senha:</label>
@@ -102,7 +102,7 @@
             <label for="exampleFormControlInput1" class="form-label">Sexo:</label>
           </div>
           <div class="col-md-6">
-          <select class="form-select" aria-label="Default select example">
+          <select class="form-select" name="sexo" aria-label="Default select example">
             <option selected disabled>Selecione o sexo</option>
             <option value="1">Masculino</option>
             <option value="2">Feminino</option>

@@ -1,5 +1,12 @@
 <?php
 
+namespace model;
+
+require_once("Db.php");
+
+use model\Db ;
+use Exception;
+use PDO;
 class Cliente
 {
 
@@ -19,20 +26,17 @@ class Cliente
 
     function __construct()
     {
-        // Dados para conectar com o banco
-        $host = "localhost";
-        $dbname = "ecommerce";
-        $user = "root";
-        $pass = "";
 
-        // Instância do banco
-        $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
-        $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-        $this->pdo = $pdo;
+        $this->pdo = Db::connect();
+    }
+
+    function teste(){
+        // var_dump($this->pdo);
+        var_dump(new PDO("mysql:host=localhost;dbname=ecommerce","root",""));
     }
 
 
-    function getClientes()
+    function buscar()
     {
         $pdo = $this->pdo;
         $sql = "SELECT * from cliente";
@@ -101,6 +105,8 @@ class Cliente
             $stmt->bindParam(':celular', $celular);
             $stmt->bindParam(':dtnasc', $nasc);
             $stmt->bindParam(':sexo', $sexo);
+            // var_dump($stmt);
+            // die();
 
 
             $stmt->execute();

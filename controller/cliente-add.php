@@ -1,11 +1,9 @@
 <?php 
 require_once("../model/Cliente.class.php");
+use model\Cliente as Cliente;
 
-try{
-    $cliente = new Cliente();
-    $cliente->add();
-}catch(Exception $e){
-    die("Erro : " . $e->getMessage);
-}
+$cliente = new Cliente();
+$cliente->add();
+
 
 header("Location: ../index.php");
