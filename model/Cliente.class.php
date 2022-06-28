@@ -6,7 +6,6 @@ require_once("Db.php");
 
 use model\Db ;
 use Exception;
-use PDO;
 class Cliente
 {
 
@@ -30,10 +29,6 @@ class Cliente
         $this->pdo = Db::connect();
     }
 
-    function teste(){
-        // var_dump($this->pdo);
-        var_dump(new PDO("mysql:host=localhost;dbname=ecommerce","root",""));
-    }
 
 
     function buscar()

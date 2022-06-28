@@ -3,6 +3,5 @@
   use model\Produtos as Produtos;
 
   $produtos = new Produtos();
-  $produtos->pedido();
-  
+  $produtos->cadastro();
 ?>

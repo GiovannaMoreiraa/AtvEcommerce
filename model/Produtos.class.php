@@ -1,4 +1,12 @@
 <?php
+
+
+namespace model;
+
+require_once("Db.php");
+
+use Exception;
+use model\Db ;
   class Produtos {
     function buscar(){
       require_once('controller/conexao.php');
@@ -44,6 +52,43 @@
       } else {
         echo "Erro! Ocorreu um problema ao adicionar o pedido";
       }
+    }
+
+
+    function cadastro(){
+      // var_dump($_GET);
+      // die(); 
+      try{
+
+        $pdo = Db::connect();
+        $nome = $_GET['nome'];
+      $descricao = $_GET['descricao'];
+      $preco = $_GET['preco'];
+      $estoque = $_GET['estoque'];
+      $marca = $_GET['marca'];
+      $categoria = $_GET['categoria'];
+
+
+      $sql = "INSERT INTO produtos (idcategoria, idmarca, nome,
+       descricao, estoque, preco) values (:idcategoria, :idmarca,:nome,:descricao,:estoque,:preco)";
+
+    
+       $stmt = $pdo->prepare($sql);
+       $stmt->bindParam(":idcategoria",$categoria);
+       $stmt->bindParam(":idmarca",$marca);
+       $stmt->bindParam(":nome",$nome);
+       $stmt->bindParam(":descricao",$descricao);
+       $stmt->bindParam(":estoque",$estoque);
+       $stmt->bindParam(":preco",$preco);
+
+       $stmt->execute();
+
+      }catch(Exception $e){
+        echo $e->getMessage();
+        die();
+      }
+
+
     }
 
     function resumo(){
