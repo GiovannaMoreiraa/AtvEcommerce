@@ -101,3 +101,10 @@ section#produtos a {
     display: flex;
 }
 
+
+form a{
+    padding-top: 5px;
+    padding-left: 7px;
+    color: inherit;
+    text-decoration: none;
+}
