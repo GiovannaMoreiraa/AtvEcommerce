@@ -7,28 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
+         *{
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            width:100%;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        div{
-            background-color: brown;
+
+        div {
+            background-color: white;
             margin: 0 auto;
             padding: 20px;
-            border-radius:5px ;
+            border-radius: 5px;
 
         }
 
-        input{
+        input {
             background-color: black;
-            color:white;
-            border-radius:5px ;
+            color: white;
+            border-radius: 5px;
         }
 
-        h1{
-                color:white;
-            }
+        h1 {
+            color: black;
+        }
     </style>
 </head>
 <body>
