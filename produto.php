@@ -27,7 +27,7 @@
 
 
         <form action="./controller/produto-cadastro.php" method="get">
-        <div class="row">
+          <div class="row">
 
 
             <div class="col-md-6">
@@ -55,7 +55,7 @@
               <label for="exampleFormControlInput1" class="form-label">Preço:</label>
             </div>
             <div class="col-md-6">
-              <input type="number" class="form-control" min = "0.00" id="preco" name="preco" placeholder="Preço do produto">
+              <input type="number" class="form-control" min="0.00" id="preco" name="preco" placeholder="Preço do produto">
             </div>
 
             <div class="col-md-6">
@@ -68,12 +68,14 @@
 
 
 
-              <select name = "marca" class="form-select" aria-label="Default select example">
+              <select name="marca" class="form-select" aria-label="Default select example">
                 <option selected value="exemplo" disabled>Selecione a marca</option>
                 <!-- fazer um foreach pegando as marcas do banco-->
                 <?php
                 require_once("model/Marca.class.php");
+
                 use model\Marca as Marca;
+
                 $marca = new Marca();
                 $results = $marca->getMarca();
                 foreach ($results as $result) {
@@ -84,12 +86,12 @@
 
               </select>
 
-              <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalMarca">
+              <!-- <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalMarca">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
                   <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
                 </svg>
-              </button>
-
+              </button> -->
+              <a href="novaMarca.php">Cadastrar nova marca</a>
             </div>
 
 
@@ -103,14 +105,16 @@
 
 
 
-              <select name = "categoria" class="form-select" aria-label="Default select example">
-                <option  selected value="exemplo" disabled>Selecione a categoria</option>
+              <select name="categoria" class="form-select" aria-label="Default select example">
+                <option selected value="exemplo" disabled>Selecione a categoria</option>
                 <!-- fazer um foreach pegando as categorias do banco-->
 
 
                 <?php
                 require_once("model/Categoria.class.php");
+
                 use model\Categoria as Categoria;
+
                 $categoria = new Categoria();
                 $results = $categoria->getCategoria();
                 foreach ($results as $result) {
@@ -121,20 +125,21 @@
                 ?>
 
               </select>
-              <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalCategoria">
+             <!--  <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalCategoria">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
                   <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
                 </svg>
-              </button>
+              </button> -->
+              <a href="novaCategoria.php">Cadastrar nova categoria</a>
             </div>
 
             <div class="row">
               <div class="col-md-4"></div>
               <div class="col-md-4" style="display: grid;">
-                <input value = "Enviar" class="btn btn-secondary" type="submit">
+                <input value="Enviar" class="btn btn-secondary" type="submit">
               </div>
               <div class="col-md-4"></div>
-            </div>    
+            </div>
           </div>
         </form>
       </div>
@@ -144,29 +149,33 @@
 
   <!-- Modal Marca -->
   <div class="modal fade" id="modalMarca" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalMarcaLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Cadastrar Nova Marca</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
+    <form action="#" method="GET">
 
-          <div class="row">
-            <div class="col-md-6">
-              <label for="exampleFormControlInput1" class="form-label">Nome da Marca:</label>
-            </div>
-            <div class="col-md-6">
-              <input type="text" class="form-control" id="nomeProd" name="nomeProd" placeholder="Digite o Nome da Marca">
-            </div>
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Cadastrar Nova Marca</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
+          <div class="modal-body">
 
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salvar</button>
+            <div class="row">
+              <div class="col-md-6">
+                <label for="exampleFormControlInput1" class="form-label">Nome da Marca:</label>
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control" id="nomeProd" name="nomeMarca" placeholder="Digite o Nome da Marca">
+              </div>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salvar</button>
+          </div>
         </div>
       </div>
-    </div>
+    </form>
+
   </div>
 
   <!-- Modal Categoria -->
