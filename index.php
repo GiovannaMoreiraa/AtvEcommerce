@@ -15,7 +15,6 @@
         <a style="margin-left:10px; margin-right: 10px;" href="cadastro.php" target="_blank">Cadastrar Cliente</a>
         <a style="margin-left:10px; margin-right: 10px;" href="produto.php" target="_blank">Cadastrar Produto</a>
         <a style="margin-left:10px; margin-right: 10px;" href="index.php?value=1 " target="_blank">Apresentar Clientes</a>
-        <a style="margin-left:10px; margin-right: 10px;" href="controller/cliente-teste.php" target="_blank">Debug Banco</a>
       </div>
     </header>
     <section id="produtos">
