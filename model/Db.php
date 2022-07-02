@@ -4,9 +4,9 @@ namespace model;
 use PDO;
 
 class Db {
-    static $host = "localhost";
-    static $dbname = "ecommerce";
-    static $user = "root";
+    static $host = "";
+    static $dbname = "";
+    static $user = "";
     static $pass = "";
 
     public static function connect(){

@@ -1,4 +1,3 @@
-# Database
+# Aviso
 
-Para que a classe 'Cliente' esteja funcional, é necessário que seja informado em seu construtor,
-os dados referente a conexão ao banco de dados, tais como usuario, senha, nome do banco e host.
+Para que as funcionalidades implementadas envolvendo banco de dados funcionem, é necessário que seja informado na classe "model/Db.php" as configurações de banco de dados (host, nome do banco, username e senha)
